@@ -24,10 +24,10 @@ class EmprestimoForm extends Form
             'options' => array(
                 'label' => 'Cliente',
                 'value_options' => array(
-                    '1' => 'Cliente 1',
-                    '2' => 'Cliente 2',
-                    '3' => 'Cliente 3',
-                    '4' => 'Cliente 4',
+                    'Cliente 1' => 'Cliente 1',
+                    'Cliente 2' => 'Cliente 2',
+                    'Cliente 3' => 'Cliente 3',
+                    'Cliente 4' => 'Cliente 4',
                 ),
             ),
             'attributes' => [
@@ -50,10 +50,10 @@ class EmprestimoForm extends Form
             'options' => array(
                 'label' => 'Título da Obra',
                 'value_options' => array(
-                    '1' => 'Livro 1',
-                    '2' => 'Livro 2',
-                    '3' => 'Livro 3',
-                    '4' => 'Livro 4',
+                    'Livro 1' => 'Livro 1',
+                    'Livro 2' => 'Livro 2',
+                    'Livro 3' => 'Livro 3',
+                    'Livro 4' => 'Livro 4',
                 ),
             ),
             'attributes' => [
