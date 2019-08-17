@@ -1,0 +1,58 @@
+<?php
+
+$title = 'Editar Emprestimo';
+$this->headTitle($title);
+?>
+<h1><?php echo $this->escapeHtml($title); ?></h1>
+<?php
+$form = $this->form;
+$form->setAttribute('action', $this->url('emprestimo', array('action' => 'edit','id'=> $this->id)));
+$form->prepare();
+
+echo $this->form()->openTag($form);
+echo $this->formHidden($form->get('id'));
+?>
+
+<div class="row">
+    <div class="col-sm-8">
+        <div class="form-group">
+            <label><?php echo $form->get('cliente')->getLabel(); ?></label>
+            <?php echo $this->formElement($form->get('cliente')); ?>
+        </div>
+    </div>
+    <div class="col-sm-4">
+        <div class="form-group">
+            <label><?php echo $form->get('dataEmprestimo')->getLabel(); ?></label>
+            <?php echo $this->formElement($form->get('dataEmprestimo')); ?>
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="col-sm-8">
+        <div class="form-group">
+            <label><?php echo $form->get('titulo')->getLabel(); ?></label>
+            <?php echo $this->formElement($form->get('titulo')); ?>
+        </div>
+    </div>
+    <div class="col-sm-4">
+        <div class="form-group">
+            <label><?php echo $form->get('diasSolicitados')->getLabel(); ?></label>
+            <?php echo $this->formElement($form->get('diasSolicitados')); ?>
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="col-sm-1">
+        <div class="form-group">
+            <?php echo $this->formSubmit($form->get('submit')); ?>
+        </div>
+    </div>
+    <div class="col-sm-1">
+        <div class="form-group">
+            <?php echo $this->formReset($form->get('my-reset')); ?>
+        </div>
+    </div>
+</div>
+
+<?php echo $this->form()->closeTag();
+

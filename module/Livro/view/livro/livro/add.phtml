@@ -1,0 +1,72 @@
+<?php
+
+$title = 'Cadastro de Livro';
+$this->headTitle($title);
+?>
+<h1><?php echo $this->escapeHtml($title); ?></h1>
+<?php
+$form = $this->form;
+$form->setAttribute('action', $this->url('livro', array('action' => 'add')));
+$form->prepare();
+
+echo $this->form()->openTag($form);
+echo $this->formHidden($form->get('id'));
+?>
+
+<div class="row">
+    <div class="col-sm-8">
+        <div class="form-group">
+            <label><?php echo $form->get('autor')->getLabel(); ?></label>
+            <?php echo $this->formElement($form->get('autor')); ?>
+        </div>
+    </div>
+    <div class="col-sm-4">
+        <div class="form-group">
+            <label><?php echo $form->get('dataCadastro')->getLabel(); ?></label>
+            <?php echo $this->formElement($form->get('dataCadastro')); ?>
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="col-sm-8">
+        <div class="form-group">
+            <label><?php echo $form->get('editora')->getLabel(); ?></label>
+            <?php echo $this->formElement($form->get('editora')); ?>
+        </div>
+    </div>
+    <div class="col-sm-4">
+        <div class="form-group">
+            <label><?php echo $form->get('valor')->getLabel(); ?></label>
+            <?php echo $this->formElement($form->get('valor')); ?>
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="col-sm-12">
+        <div class="form-group">
+            <label><?php echo $form->get('titulo')->getLabel(); ?></label>
+            <?php echo $this->formElement($form->get('titulo')); ?>
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="col-sm-8">
+        <div class="form-group">
+            <label><?php echo $form->get('obs')->getLabel(); ?></label>
+            <?php echo $this->formElement($form->get('obs')); ?>
+        </div>
+    </div>
+    <div class="col-sm-1">
+        <div class="form-group">
+            <?php echo $this->formSubmit($form->get('submit')); ?>
+        </div>
+    </div>
+    <div class="col-sm-1">
+        <div class="form-group">
+            <?php echo $this->formReset($form->get('my-reset')); ?>
+        </div>
+    </div>
+</div>
+
+<?php echo $this->form()->closeTag();
+

@@ -1,0 +1,24 @@
+<?php
+
+$title = 'Deletar Cliente';
+$this->headTitle($title);
+?>
+<h1><?php echo $this->escapeHtml($title); ?></h1>
+
+<p>Confirmar a exclusão do cliente
+    '<?php echo $this->escapeHtml($cliente->cliente); ?>' -
+    '<?php echo $this->escapeHtml($cliente->cpf); ?>'?
+</p>
+<?php
+$url = $this->url('cliente', array(
+    'action' => 'delete',
+    'id'     => $this->id,
+));
+?>
+<form action="<?php echo $url; ?>" method="post">
+<div>
+    <input type="hidden" name="id" value="<?php echo (int) $cliente->id; ?>" />
+    <input type="submit" name="del" value="Sim" />
+    <input type="submit" name="del" value="Não" />
+</div>
+</form>
