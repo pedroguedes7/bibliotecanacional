@@ -52,7 +52,7 @@ class EmprestimoForm extends Form
                 'value_options' => array(
                     'Livro 1' => 'Livro 1',
                     'Livro 2' => 'Livro 2',
-                    'Livro 3' => 'Livro 3',
+                    'Livro 3' => 'Livro 3', 
                     'Livro 4' => 'Livro 4',
                 ),
             ),
