@@ -44,9 +44,9 @@ Certifique-se que NameVirtualHost esteja definido e apontando para “*:80” ou
 
     <VirtualHost *:8080>
     ServerName localhost.biblioteca
-    DocumentRoot "C:/xampp/htdocs/biblioteca/public"
+    DocumentRoot "C:/xampp/htdocs/bibliotecanacional/public"
     SetEnv APPLICATION_ENV "development"
-    <Directory "C:/xampp/htdocs/biblioteca/public">
+    <Directory "C:/xampp/htdocs/bibliotecanacional/public">
         DirectoryIndex index.php
         AllowOverride All
         Order allow,deny
